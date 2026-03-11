@@ -1,0 +1,68 @@
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 60px;
+  background:#f4f4f4;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:700;
+  color:#ff6a00;
+}
+
+.nav-links{
+  display:flex;
+  gap:40px;
+  list-style:none;
+  color:#666;
+  font-weight:500;
+}
+
+.contact-btn{
+  background:#ff4d00;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:6px;
+  font-weight:600;
+}
+
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:80px;
+  padding:80px 80px;
+  background:#07121d;
+  color:white;
+}
+
+.hero-img img{
+  width:480px;
+  border-radius:15px;
+}
+
+.hero-text{
+  max-width:500px;
+}
+
+.hero-text h1{
+  font-size:48px;
+  line-height:1.2;
+}
+
+.hero-text p{
+  margin-top:20px;
+  color:#ccc;
+}
+
+.learn-btn{
+  margin-top:20px;
+  background:#ffc107;
+  border:none;
+  padding:12px 20px;
+  border-radius:6px;
+  font-weight:600;
+}
