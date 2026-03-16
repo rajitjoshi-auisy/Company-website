@@ -268,3 +268,238 @@
   outline: 2px solid white;
   outline-offset: 3px;
 }
+
+/* ============================================
+   Industries Section — add to your main CSS
+   ============================================ */
+
+.industries-section {
+  background: #f0f0f0;
+  padding: 60px 60px 70px;
+}
+
+.industries-inner {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 48px;
+  max-width: 1100px; /* match your cards width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.industries-left {
+  flex: 0 0 auto;
+  min-width: 220px;
+}
+
+.industries-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.industries-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.industries-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* Cards grid */
+.industries-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual card */
+.industry-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 2 / 3;
+  border-radius: 0;
+}
+
+.industry-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.industry-card:hover .industry-card-img {
+  transform: scale(1.05);
+}
+
+/* Color overlay per card (passed inline via `overlay` prop) */
+.industry-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: opacity 0.35s ease;
+}
+
+/* Extra darkening layer on hover */
+.industry-card-hover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.18);
+  transition: opacity 0.35s ease;
+}
+
+/* Title at bottom center */
+.industry-card-title {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 0 20px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+  .industries-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .industries-section {
+  background: #f0f0f0;
+  padding: 60px 20px 70px; /* reduce side padding from 60px to 20px */
+}
+
+  .industries-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-heading {
+    font-size: 2rem;
+  }
+}
+/* ============================================
+   Empower Section
+   ============================================ */
+
+.empower-section {
+  display: flex;
+  align-items: stretch;
+  min-height: 620px;
+  background: #fff;
+}
+
+.empower-left {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 60px 100px 100px;
+}
+
+.empower-heading {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin: 0 0 48px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.empower-desc {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+  margin: 0 0 40px 0;
+  max-width: 520px;
+  font-family: 'Inter', sans-serif;
+}
+
+.empower-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 1.5px solid #1a1a1a;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.empower-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.empower-right {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.empower-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .empower-section {
+    flex-direction: column;
+  }
+
+  .empower-left {
+    flex: unset;
+    padding: 50px 30px;
+  }
+
+  .empower-right {
+    min-height: 320px;
+  }
+
+  .empower-heading {
+    font-size: 2.2rem;
+  }
+}
