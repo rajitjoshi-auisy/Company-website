@@ -1,19 +1,12 @@
 function TopBar() {
   return (
-    <div style={{
-      background: "linear-gradient(to right,#ff6a00,#ffb347)",
-      color: "white",
-      padding: "8px 20px",
-      display: "flex",
-      justifyContent: "space-between",
-      fontSize: "14px"
-    }}>
+    <div className="bg-gradient-to-r from-[#ff6a00] to-[#ffb347] text-white px-5 py-2 flex justify-between items-center text-sm">
       <div>
         India HQ Hours: Mon – Fri, 9am – 5pm
       </div>
-
-      <div>
-        📞 02061096815 &nbsp;&nbsp; ✉ info@auisy.com
+      <div className="flex items-center gap-5">
+        <span>📞 02061096815</span>
+        <span>✉ info@auisy.com</span>
       </div>
     </div>
   );
